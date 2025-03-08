@@ -1,0 +1,80 @@
+/* Styles pour le profil */
+.profile-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-fit-to-width: true;
+}
+
+.profile-container {
+    -fx-background-color: white;
+    -fx-spacing: 0;
+}
+
+.cover-photo-container {
+    -fx-min-height: 300;
+}
+
+.cover-photo {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 0);
+}
+
+.profile-picture-container {
+    -fx-translate-x: 30;
+    -fx-translate-y: 60;
+}
+
+.profile-picture-circle {
+    -fx-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 0);
+}
+
+.profile-picture {
+    -fx-clip: circle(60px at center);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}
+
+.profile-info-container {
+    -fx-padding: 80 30 30 30;
+    -fx-spacing: 15;
+    -fx-background-color: white;
+}
+
+.profile-name {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.profile-bio {
+    -fx-font-size: 14px;
+    -fx-text-fill: #65676b;
+}
+
+.profile-stats {
+    -fx-padding: 10 0;
+    -fx-alignment: center-left;
+}
+
+.stat-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.edit-profile-button {
+    -fx-background-color: #1877f2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8 20;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+    -fx-max-width: 200;
+}
+
+.edit-profile-button:hover {
+    -fx-background-color: #166fe5;
+}
+
+.user-posts-container {
+    -fx-padding: 20;
+    -fx-spacing: 20;
+    -fx-alignment: center;
+    -fx-background-color: #f0f2f5;
+}

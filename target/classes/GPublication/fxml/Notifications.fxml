@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+
+<VBox fx:id="notificationContainer" spacing="10" alignment="TOP_CENTER"
+      style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-radius: 5;"
+      stylesheets="@../style/App.css"
+      prefWidth="300" maxWidth="300"
+      xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.Controller.NotificationController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label text="Centre de notifications" style="-fx-font-weight: bold; -fx-font-size: 16;" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Button fx:id="markAllReadBtn" text="Tout marquer comme lu" onAction="#markAllAsRead" />
+    </HBox>
+    <VBox fx:id="notificationsListContainer" spacing="5"
+
+
+    />
+
+
+</VBox>

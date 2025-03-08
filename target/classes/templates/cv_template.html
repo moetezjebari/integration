@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV de {{nom}} {{prenom}}</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1 { color: #2c3e50; }
+        h2 { color: #34495e; }
+        p { color: #7f8c8d; }
+    </style>
+</head>
+<body>
+<h1>{{nom}} {{prenom}}</h1>
+<h2>Coordonnées</h2>
+<p><strong>Email :</strong> {{email}}</p>
+
+<h2>Mission postulée</h2>
+<p><strong>Titre :</strong> {{mission.titre}}</p>
+<p><strong>Description :</strong> {{mission.description}}</p>
+
+<h2>Réponses aux questions</h2>
+<p>{{reponses}}</p>
+</body>
+</html>

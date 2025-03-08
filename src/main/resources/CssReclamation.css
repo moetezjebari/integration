@@ -1,0 +1,51 @@
+/* Style général pour le conteneur */
+.anchor-pane {
+    -fx-background-image: url("lajout.png"); /* Chemin vers votre image d'arrière-plan */
+    -fx-background-size: cover; /* Pour couvrir l'ensemble de l'espace */
+    -fx-padding: 40; /* Espace interne */
+}
+
+/* Style des Labels */
+.label {
+    -fx-font-family: "Arial"; /* Police de caractères */
+    -fx-font-size: 18px; /* Taille de la police */
+    -fx-text-fill: #ffffff; /* Couleur du texte */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 1, 1); /* Ombre pour le texte */
+}
+
+/* Style des TextFields */
+.text-field {
+    -fx-background-color: rgba(255, 255, 255, 0.9); /* Fond semi-transparent */
+    -fx-border-color: #007bff; /* Couleur de la bordure */
+    -fx-border-radius: 5; /* Coins arrondis */
+    -fx-padding: 12; /* Espace interne */
+    -fx-font-size: 16px; /* Taille de la police */
+}
+
+/* Style des boutons */
+.button {
+    -fx-background-color: #007bff; /* Couleur de fond bleu */
+    -fx-text-fill: #ffffff; /* Couleur du texte */
+    -fx-padding: 14 25; /* Espacement interne */
+    -fx-font-size: 16px; /* Taille de la police */
+    -fx-border-radius: 5; /* Coins arrondis */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 1, 1); /* Ombre pour les boutons */
+    -fx-cursor: hand; /* Curseur en main au survol */
+}
+
+.button:hover {
+    -fx-background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+.button:pressed {
+    -fx-background-color: #004085; /* Couleur de fond lors de l'appui */
+}
+
+/* Style des boutons d'annulation */
+.button.cancel {
+    -fx-background-color: #dc3545; /* Couleur de fond rouge */
+}
+
+.button.cancel:hover {
+    -fx-background-color: #c82333; /* Couleur au survol */
+}

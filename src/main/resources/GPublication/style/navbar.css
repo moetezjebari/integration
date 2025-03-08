@@ -1,0 +1,65 @@
+/* Style général de la barre de navigation */
+.navbar {
+    -fx-background-color: white;
+    -fx-padding: 0 0;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 0 1px 0;
+    -fx-alignment: center;
+    -fx-pref-width: 100em;
+}
+
+/* Style des éléments de navigation */
+.nav-item {
+    -fx-alignment: center;
+    -fx-spacing: 5px;
+    -fx-padding: 10 25px;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+    -fx-border-radius: 0;
+}
+
+/* Style du texte des éléments de navigation */
+.nav-item Label {
+    -fx-text-fill: rgba(0, 0, 0, 0.6);
+    -fx-font-size: 12px;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Style au survol des éléments de navigation */
+.nav-item:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.04);
+    -fx-background-radius: 4px;
+}
+
+.nav-item:hover Label {
+    -fx-text-fill: rgba(0, 0, 0, 0.9);
+}
+
+/* Style pour l'élément actif */
+.nav-item.active {
+    -fx-border-color: black;
+    -fx-border-width: 0 0 5px 0;
+}
+
+.nav-item.active Label {
+    -fx-text-fill: #0a66c2;
+}
+
+/* Style spécifique pour l'icône de profil */
+#profileIcon {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 1, 0, 0, 0);
+    -fx-background-radius: 50%;
+}
+/* Style pour le badge de notification */
+.notification-badge {
+    -fx-background-color: #cc1016;
+    -fx-background-radius: 50%;
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-min-width: 16px;
+    -fx-min-height: 16px;
+    -fx-alignment: center;
+    -fx-translate-x: 8;
+    -fx-translate-y: -8;
+}

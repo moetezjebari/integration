@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.SidebarController"
+      alignment="TOP_LEFT"
+      spacing="15"
+      styleClass="sidebar"
+      prefWidth="230"
+      prefHeight="720">
+    <Label text="Admin Panel" styleClass="sidebar-title"/>
+
+    <HBox alignment="CENTER_LEFT" spacing="10" styleClass="profile-section">
+        <Button fx:id="profileButton" styleClass="profile-button">
+            <graphic>
+                <ImageView fx:id="profileImage" fitWidth="60" fitHeight="60"/>
+            </graphic>
+        </Button>
+
+
+        <Label text="edit profile" styleClass="profile-name"/>
+    </HBox>
+
+
+
+    <Button fx:id="btnHome" text="🏠 Home" styleClass="sidebar-button"/>
+    <Button fx:id="voirmission" text="👤voir mission" styleClass="sidebar-button"/>
+    <Button fx:id="voircondidature" text="📋voir condidature" styleClass="sidebar-button"/>
+    <Button fx:id="avis" text="✊🏻avis" styleClass="sidebar-button"/>
+    <Button fx:id="reclamation" text="🪪reclamation" styleClass="sidebar-button"/>
+
+
+    <Pane prefHeight="20"/>
+
+</VBox>

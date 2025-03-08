@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ModifierReclamationController">
+    <Label text="Titre de la réclamation:" layoutX="20.0" layoutY="20.0"/>
+    <TextField fx:id="titreTextField" layoutX="150.0" layoutY="20.0" promptText="Entrez le titre" />
+
+    <Label text="Description de la réclamation:" layoutX="20.0" layoutY="60.0"/>
+    <TextField fx:id="descriptionTextField" layoutX="150.0" layoutY="60.0" promptText="Entrez la description" />
+
+    <Button text="Modifier" layoutX="150.0" layoutY="100.0" onAction="#modifierReclamation"/>
+    <Button text="Annuler" layoutX="220.0" layoutY="100.0" onAction="#annulerReclamation"/>
+</AnchorPane>

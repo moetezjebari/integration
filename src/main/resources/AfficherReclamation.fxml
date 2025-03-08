@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.14"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.roua.AfficherReclamationController"
+            styleClass="root-pane">
+
+    <!-- ✅ Left Sidebar -->
+    <left>
+        <VBox fx:id="sidebarContainer" styleClass="sidebar" prefWidth="250" style="-fx-background-color: #333;">
+            <fx:include source="/components/sidebar.fxml" />
+        </VBox>
+    </left>
+
+    <!-- ✅ Main Content -->
+    <center>
+        <AnchorPane prefHeight="607.0" prefWidth="913.0">
+
+            <!-- En-tête -->
+            <Label layoutX="20.0" layoutY="10.0" styleClass="header-label" text="Gestion des Réclamations" />
+
+            <!-- Barre de recherche et tri -->
+            <HBox layoutX="20.0" layoutY="50.0" spacing="10" alignment="CENTER_LEFT" styleClass="search-bar">
+                <TextField fx:id="searchField" promptText="Rechercher..." styleClass="search-field"/>
+                <Button fx:id="searchButton" styleClass="icon-button">
+                    <graphic>
+                        <ImageView fitHeight="16" fitWidth="16" preserveRatio="true">
+                            <Image url="@images/search.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="sortButton" text="Trier par Réponses" styleClass="blue-button"/>
+            </HBox>
+
+            <!-- Conteneur principal -->
+            <VBox layoutX="20.0" layoutY="90.0" prefWidth="873.0" spacing="10" styleClass="main-container">
+                <!-- ScrollPane contenant les réclamations en grille -->
+                <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="440.0" prefWidth="850.0" styleClass="scroll-pane">
+                    <content>
+                        <GridPane fx:id="reclamationGridPane" hgap="20" vgap="20" styleClass="grid-pane">
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="33.33"/>
+                                <ColumnConstraints percentWidth="33.33"/>
+                                <ColumnConstraints percentWidth="33.33"/>
+                            </columnConstraints>
+                        </GridPane>
+                    </content>
+                </ScrollPane>
+
+                <!-- Bouton Ajouter -->
+                <HBox alignment="CENTER">
+                    <Button fx:id="ajouterButton" text="+ Ajouter une Réclamation" onAction="#ajouterReclamation" styleClass="blue-button"/>
+                </HBox>
+            </VBox>
+
+        </AnchorPane>
+    </center>
+
+    <!-- Fichiers CSS -->
+    <stylesheets>
+        <URL value="@CssAfficherReclamation.css" />
+        <URL value="@styles/sidebar.css" />
+    </stylesheets>
+</BorderPane>

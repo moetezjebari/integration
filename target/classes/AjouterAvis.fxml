@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml"
+           fx:controller="controllers.AjouterAvisController" styleClass="root"
+           stylesheets="@/ajouteravis.css">
+
+    <VBox spacing="15" alignment="CENTER" styleClass="container">
+
+        <Label text="Ajouter un Avis" styleClass="title" />
+
+        <Label text="Type d'Avis :" styleClass="label" />
+        <HBox spacing="10">
+            <CheckBox fx:id="chkservice" text="Service" styleClass="checkbox"/>
+            <CheckBox fx:id="chkformation" text="Formation" styleClass="checkbox"/>
+            <CheckBox fx:id="chkautre" text="Autre" styleClass="checkbox"/>
+        </HBox>
+
+        <Label text="Commentaire :" styleClass="label" />
+        <TextArea fx:id="txtCommentaire" promptText="Entrez votre commentaire ici..." wrapText="true" styleClass="textarea" />
+
+        <Label text="Note :" styleClass="label" />
+        <HBox fx:id="starContainer" spacing="5" />
+
+        <HBox spacing="10">
+            <Button fx:id="btnAjouter" text="Ajouter" onAction="#ajouterAvis" styleClass="button-add">
+                <graphic>
+                    <ImageView fx:id="iconAjouter" fitHeight="16" fitWidth="16" />
+                </graphic>
+            </Button>
+            <Button fx:id="btnAnnuler" text="Annuler" onAction="#fermerFenetre" styleClass="button-cancel">
+                <graphic>
+                    <ImageView fx:id="iconAnnuler" fitHeight="16" fitWidth="16" />
+                </graphic>
+            </Button>
+        </HBox>
+    </VBox>
+</StackPane>

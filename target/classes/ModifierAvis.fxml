@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ModifierAvisController">
+    <children>
+        <VBox alignment="TOP_CENTER" spacing="10" prefWidth="400" prefHeight="300">
+            <Label text="Modifier Avis" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+            <!-- Conteneur pour les étoiles -->
+            <HBox fx:id="starContainer" spacing="5" alignment="CENTER">
+                <!-- Les étoiles seront ajoutées dynamiquement en Java -->
+            </HBox>
+
+            <!-- TextArea pour le commentaire -->
+            <TextArea fx:id="commentaireField" promptText="Votre commentaire..." wrapText="true" prefRowCount="3"/>
+
+            <!-- Cases à cocher pour le type d'avis -->
+            <HBox spacing="10" alignment="CENTER">
+                <CheckBox fx:id="chkservice" text="service"/>
+                <CheckBox fx:id="chkformation" text="formation"/>
+                <CheckBox fx:id="chkautre" text="autre"/>
+            </HBox>
+
+            <!-- Boutons Modifier & Annuler -->
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Modifier" onAction="#modifierAvis" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+                <Button text="Annuler" onAction="#fermerFenetre" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

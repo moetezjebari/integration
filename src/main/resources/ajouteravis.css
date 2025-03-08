@@ -1,0 +1,88 @@
+/* Appliquer un background image à la fenêtre */
+.root {
+    -fx-background-image: url("/images/ajout_avis.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+/* Conteneur principal avec un fond semi-transparent et un dégradé bleu élégant */
+.container {
+    -fx-padding: 30;
+    -fx-background-color: linear-gradient(to bottom, #4facfe, #00f2fe); /* Dégradé bleu moderne */
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 5);
+    -fx-alignment: center;
+}
+
+/* Style du titre */
+.title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Rounded MT Bold";
+}
+
+/* Labels */
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+}
+
+/* Cases à cocher */
+.checkbox {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+/* Zone de texte */
+.textarea {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-text-fill: white;
+    -fx-border-color: #007bff;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-font-size: 16px;
+    -fx-font-family: "Segoe UI";
+    -fx-padding: 10;
+}
+
+/* Style des boutons */
+.button-add, .button-cancel {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10 20;
+    -fx-font-family: "Arial";
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 5, 0, 0, 3);
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+/* Bouton Ajouter avec un dégradé dynamique */
+.button-add {
+    -fx-background-color: linear-gradient(to bottom, #007bff, #0056b3); /* Dégradé bleu profond */
+}
+
+/* Bouton Annuler avec un bleu plus doux */
+.button-cancel {
+    -fx-background-color: linear-gradient(to bottom, #66a6ff, #0056b3); /* Bleu clair */
+}
+
+/* Effet hover sur les boutons */
+.button-add:hover, .button-cancel:hover {
+    -fx-opacity: 0.85;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Effet au clic */
+.button-add:pressed, .button-cancel:pressed {
+    -fx-opacity: 0.7;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}

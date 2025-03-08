@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.Controller.MainViewController"
+            fitToWidth="true"
+            fx:id="mainContainer">
+
+    <VBox spacing="20"
+          alignment="CENTER"
+          style="-fx-padding: 20;"
+          stylesheets="@../style/App.css">
+        <fx:include source="NavBar.fxml"/>
+
+        <StackPane fx:id="contentArea">
+            <fx:include source="acceuil.fxml"/>
+        </StackPane>
+
+
+
+
+    </VBox>
+</ScrollPane>

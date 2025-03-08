@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            styleClass="root"
+            stylesheets="@../style/PostInterface.css"
+            fx:controller="org.example.Controller.PostController">
+
+    <VBox spacing="20" alignment="TOP_CENTER" layoutX="10" layoutY="10"
+          styleClass="post-interface-container"
+          prefWidth="800" prefHeight="600">
+
+        <!-- En-tête avec profil -->
+        <HBox spacing="15" alignment="CENTER_LEFT" styleClass="profile-header">
+            <StackPane>
+                <ImageView fitHeight="50" fitWidth="50" styleClass="profile-picture">
+                    <Image url="@../images/p.png" />
+                </ImageView>
+            </StackPane>
+            <VBox spacing="5">
+                <Label text="Moetez Jebari" styleClass="username" />
+                <HBox spacing="5" alignment="CENTER_LEFT">
+                    <Label text="Visibilité :" styleClass="visibility-label" />
+                    <Label text="Tout le monde" styleClass="visibility-value" />
+                </HBox>
+            </VBox>
+        </HBox>
+
+        <!-- Zone de texte principale -->
+        <TextArea fx:id="text"
+                  promptText="De quoi souhaitez-vous discuter ?"
+                  wrapText="true"
+                  styleClass="post-text-area"
+                  prefRowCount="4" />
+
+        <!-- Champ URL image avec aperçu -->
+        <VBox spacing="10" styleClass="image-container">
+            <TextField fx:id="imageUrlField"
+                       promptText="URL de l'image"
+                       editable="false"
+                       visible="false"/>
+            <StackPane>
+                <ImageView fx:id="imageView"
+                           fitWidth="500"
+                           fitHeight="300"
+                           preserveRatio="true"
+                           styleClass="post-preview-image"/>
+                <Button fx:id="removeImageButton"
+                        visible="false"
+                        styleClass="remove-image-button"
+                        onAction="#handleRemoveImage"
+                        text="×"
+                        StackPane.alignment="TOP_RIGHT"/>
+
+            </StackPane>
+
+        </VBox>
+
+        <!-- Barre d'outils -->
+        <HBox spacing="15" alignment="CENTER_LEFT" styleClass="toolbar">
+
+            <Button text="📎"
+                    styleClass="media-button"
+                    onAction="#AddPicture"/>
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <!-- Boutons d'action -->
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button text="Publier"
+                        styleClass="action-button, publish-button"
+                        onAction="#handleAddPost"
+                        fx:id="post" />
+
+            </HBox>
+        </HBox>
+
+    </VBox>
+</AnchorPane>

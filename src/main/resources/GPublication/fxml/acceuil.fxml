@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.Controller.acceuilController"
+            prefHeight="400.0" prefWidth="600.0"
+            stylesheets="@../style/App.css">
+
+    <VBox spacing="20"
+          AnchorPane.topAnchor="0.0"
+          AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0"
+          alignment="CENTER"
+          style="-fx-padding: 20; -fx-border-color: transparent;">
+
+        <fx:include fx:id="postInterface" alignment="TOP_CENTER" source="PostInterface.fxml"/>
+        <fx:include fx:id="postList" source="PostList.fxml" />
+
+    </VBox>
+
+</AnchorPane>

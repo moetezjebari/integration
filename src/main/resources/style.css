@@ -1,0 +1,32 @@
+/* Styles pour les boutons alignés horizontalement dans l'HBox */
+.button {
+    -fx-background-color: linear-gradient(to right, #2980B9, #6DD5FA); /* Dégradé bleu moderne */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px; /* Augmenter la taille de la police pour un meilleur impact */
+    -fx-padding: 12px 25px; /* Espacement plus large pour une meilleure lisibilité */
+    -fx-border-radius: 8px; /* Coins plus arrondis pour un look plus doux */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 6, 0, 2, 2); /* Ombre plus douce */
+    -fx-min-width: 160px; /* Largeur minimale pour des boutons uniformes */
+    -fx-max-width: 200px; /* Limite de largeur pour l'uniformité */
+    -fx-cursor: hand; /* Curseur en main pour l'interaction */
+}
+
+/* Effet au survol du bouton */
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #1F618D, #5DADE2); /* Dégradé plus foncé au survol */
+    -fx-transform: scale(1.05); /* Légère augmentation de la taille pour un effet interactif */
+}
+
+/* Pour le HBox */
+.hbox {
+    -fx-spacing: 20px; /* Espacement légèrement plus grand pour un effet plus aéré */
+    -fx-alignment: center; /* Centrer les éléments horizontalement */
+}
+
+/* Pour le VBox autour des boutons */
+.vbox {
+    -fx-spacing: 25px; /* Espacement plus grand pour un alignement plus aéré */
+    -fx-alignment: center; /* Centrer les éléments verticalement */
+    -fx-padding: 15px 0; /* Padding autour pour un meilleur espacement général */
+}

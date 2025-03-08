@@ -1,0 +1,155 @@
+/* Style général */
+VBox {
+    -fx-padding: 15;
+    -fx-background-color: #F8F9FA;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 10;
+
+}
+
+.profile-picture {
+    -fx-clip: circle(50%);
+    -fx-background-radius: 50%; /* Arrondir les bords de l'image */
+    -fx-border-color: transparent; /* Pas de bordure autour de l'image */
+    -fx-border-width: 0;
+
+}
+
+/* Conteneur du champ de texte */
+.input-container {
+    -fx-background-color: white;
+    -fx-padding: 8;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+.root {
+    -fx-background-color: #ffffff;
+    -fx-padding: 15px;
+}
+
+.username {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.visibility {
+    -fx-font-size: 12px;
+    -fx-text-fill: gray;
+}
+
+.text-area {
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+}
+
+.icon-button {
+    -fx-background-color: transparent;
+    -fx-font-size: 40px;
+}
+
+.post-button {
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 15px;
+    -fx-border-radius: 5px;
+}
+.post-interface-container {
+    -fx-background-color: white;
+    -fx-padding: 25;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0, 0, 3);
+}
+
+.profile-header {
+    -fx-padding: 10;
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 10;
+}
+
+.username {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2b2b2b;
+}
+
+.visibility-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #65676b;
+}
+
+.visibility-value {
+    -fx-font-size: 13px;
+    -fx-text-fill: #050505;
+}
+
+.post-text-area {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    -fx-font-size: 14px;
+}
+
+.image-container {
+    -fx-background-color: #f8f9fa;
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+}
+
+.image-url-field {
+    -fx-background-color: white;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 5;
+}
+
+.post-preview-image {
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 0);
+}
+
+.toolbar {
+    -fx-padding: 10;
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 10;
+}
+
+.emoji-button, .media-button, .attachment-button, .edit-button {
+    -fx-background-color: transparent;
+    -fx-font-size: 20px;
+    -fx-cursor: hand;
+}
+
+.action-button {
+    -fx-padding: 8 20;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+.publish-button {
+    -fx-background-color: #0a66c2;
+    -fx-text-fill: white;
+}
+
+.delete-button {
+    -fx-background-color: #dc3545;
+    -fx-text-fill: white;
+}
+
+.edit-button {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+}
+
+.action-button:hover {
+    -fx-opacity: 0.9;
+}
+
+

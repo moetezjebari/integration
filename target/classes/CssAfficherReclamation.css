@@ -1,0 +1,141 @@
+/* 🌆 Image de fond */
+.root-pane {
+    -fx-background-image: url("/images/background.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+/* 🌆 Image de fond */
+.root-pane {
+    -fx-background-image: url("/images/background.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+/* 🎯 Titre centré */
+.header-label {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 20px 0;
+    -fx-alignment: center;
+    -fx-pref-width: 100%;
+    -fx-text-alignment: center;
+}
+
+/* 🛠️ Barre de recherche et tri éloignée */
+.search-bar-container {
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-alignment: center;
+    -fx-translate-y: -30px; /* Éloigne la barre du contenu principal */
+}
+
+/* 🔎 Champ de recherche */
+.search-field {
+    -fx-pref-width: 280px;
+    -fx-padding: 10px;
+    -fx-border-color: linear-gradient(to right, #2980B9, #6DD5FA);
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+/* ⚙️ Boutons avec dégradé */
+.icon-button {
+    -fx-background-color: linear-gradient(to right, #2980B9, #6DD5FA);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+}
+
+.icon-button:hover {
+    -fx-background-color: linear-gradient(to right, #1F618D, #5DADE2);
+}
+
+/* 🖼️ Conteneur principal avec bordure en dégradé */
+.main-container {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 12px;
+    -fx-padding: 20px;
+    -fx-border-width: 3px;
+    -fx-border-radius: 15px;
+    -fx-border-color: linear-gradient(to right, #2980B9, #6DD5FA);
+    -fx-margin-top: 50px; /* Plus d'espace sous la barre de recherche */
+}
+
+/* 📜 Cartes de réclamation */
+.grid-pane {
+    -fx-padding: 30px;
+    -fx-hgap: 25px;
+    -fx-vgap: 25px;
+}
+
+.grid-pane > * {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: linear-gradient(to right, #2980B9, #6DD5FA);
+    -fx-border-width: 2px;
+    -fx-border-radius: 12px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 12, 0, 0, 8);
+}
+
+/* ✍️ Texte des cartes */
+.card-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+}
+
+.card-content {
+    -fx-font-size: 16px;
+    -fx-text-fill: #5D6D7E;
+}
+
+/* 🎨 Boutons avec dégradé */
+.button-modifier {
+    -fx-background-color: linear-gradient(to right, #F1C40F, #F39C12);
+    -fx-text-fill: #2C3E50;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 14px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.button-modifier:hover {
+    -fx-background-color: linear-gradient(to right, #F39C12, #E67E22);
+}
+
+.button-supprimer {
+    -fx-background-color: linear-gradient(to right, #E74C3C, #C0392B);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 14px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.button-supprimer:hover {
+    -fx-background-color: linear-gradient(to right, #C0392B, #A93226);
+}
+
+.button-voir {
+    -fx-background-color: linear-gradient(to right, #2ECC71, #27AE60);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 14px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.button-voir:hover {
+    -fx-background-color: linear-gradient(to right, #27AE60, #229954);
+}
+
+/* 📜 ScrollPane */
+.scroll-pane {
+    -fx-border-color: linear-gradient(to right, #BDC3C7, #95A5A6);
+    -fx-border-radius: 12px;
+}

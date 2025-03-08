@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="navbar" stylesheets="@../style/navbar.css"
+            fx:controller="org.example.Controller.NavBarController">
+    <HBox spacing="20" alignment="CENTER" styleClass="navbar" >
+        <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets bottom="10" />
+            </padding>
+            <TextField fx:id="input_recherche" promptText="Rechercher par titre..." HBox.hgrow="ALWAYS" />
+            <FontAwesomeIconView glyphName="search" size="24" styleClass="nav-icon"/>
+        </HBox>
+        <VBox alignment="CENTER" styleClass="nav-item" fx:id="retour" onMouseClicked="#retour">
+            <FontAwesomeIconView glyphName="ARROW_LEFT" size="24" styleClass="nav-icon"/>
+            <Label text="return" />
+        </VBox>
+        <VBox alignment="CENTER" styleClass="nav-item" fx:id="acceuil" onMouseClicked="#handleNavClick">
+            <FontAwesomeIconView glyphName="HOME" size="24" styleClass="nav-icon"/>
+            <Label text="Accueil" />
+        </VBox>
+        <VBox alignment="CENTER" styleClass="nav-item" onMouseClicked="#handleNavClick">
+            <FontAwesomeIconView glyphName="USERS" size="24" styleClass="nav-icon"/>
+            <Label text="Réseau" />
+        </VBox>
+        <VBox alignment="CENTER" styleClass="nav-item" onMouseClicked="#handleNavClick">
+            <FontAwesomeIconView glyphName="BRIEFCASE" size="24" styleClass="nav-icon"/>
+            <Label text="Emplois" />
+        </VBox>
+        <VBox alignment="CENTER" styleClass="nav-item" onMouseClicked="#handleNavClick">
+            <FontAwesomeIconView glyphName="COMMENT" size="24" styleClass="nav-item"/>
+            <Label text="Messagerie" />
+        </VBox>
+        <VBox alignment="CENTER" styleClass="nav-item" onMouseClicked="#handleNavClick" fx:id="notif">
+            <StackPane>
+                <FontAwesomeIconView glyphName="BELL" styleClass="nav-icon" size="24" />
+                <Label fx:id="notificationBadge" styleClass="notification-badge" text="3" visible="false" />
+            </StackPane>
+            <Label text="Notifications" />
+        </VBox>
+        <VBox alignment="CENTER" styleClass="nav-item" onMouseClicked="#handleNavClick">
+            <FontAwesomeIconView glyphName="USER" size="24"/>
+            <Label text="Vous" />
+        </VBox>
+    </HBox>
+
+</AnchorPane>

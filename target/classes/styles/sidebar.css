@@ -1,0 +1,112 @@
+/* Sidebar Background */
+.sidebar {
+    -fx-background-color: #4A4E69;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-alignment: center-left;
+    -fx-pref-width: 220px;
+    -fx-min-height: 100%;
+}
+
+/* Profile Section */
+.profile-section {
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+    -fx-padding-bottom: 20px;
+}
+
+/* Profile Button */
+.profile-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 50%;
+    -fx-padding: 5px;
+    -fx-pref-width: 60px;
+    -fx-pref-height: 60px;
+    -fx-border-radius: 50%;
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+    -fx-border-width: 2px;
+    -fx-alignment: center;
+    -fx-cursor: hand;
+}
+
+.profile-button:hover {
+    -fx-border-color: #6C63FF;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+/* Profile Name */
+.profile-name {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* Sidebar Title */
+.sidebar-title {
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 0 20px 10px;
+}
+
+/* Sidebar Buttons */
+.sidebar-button {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-padding: 10px;
+    -fx-pref-width: 200px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 2, 2);
+    -fx-alignment: center-left;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.4);
+    -fx-text-fill: #6C63FF;
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+}
+
+/* Logout Button */
+.logout-button {
+    -fx-background-color: linear-gradient(to right, #6C63FF, #4A4E69);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 15px;
+    -fx-pref-width: 200px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 2, 2);
+    -fx-alignment: center-left;
+}
+
+.logout-button:hover {
+    -fx-background-color: linear-gradient(to right, #4A4E69, #6C63FF);
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+}
+
+/* Center Content Styling */
+.content-area {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-border-radius: 8px;
+    -fx-padding: 20px;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4A4E69;
+}
+
+#profileImage {
+    -fx-border-color: red;
+    -fx-border-width: 2px;
+    -fx-background-color: white;
+}

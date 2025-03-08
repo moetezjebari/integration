@@ -1,0 +1,5 @@
+.chart-line-symbol {
+    -fx-background-radius: 8px; /* Taille des cercles */
+    -fx-padding: 8px;
+    -fx-background-color: orange; /* Couleur des cercles */
+}

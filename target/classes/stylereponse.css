@@ -1,0 +1,65 @@
+/* Appliquer un fond clair avec une image de fond et des coins arrondis */
+AnchorPane {
+    -fx-background-image: url("/imageeee.png"); /* Ajouter une image de fond */
+    -fx-background-size: cover; /* Couvre toute la surface */
+    -fx-background-position: center; /* Centrer l'image */
+    -fx-padding: 20px;
+}
+
+/* Style des labels avec un ton doux et moderne */
+Label {
+    -fx-text-fill: #2C3E50; /* Gris foncé pour le texte */
+    -fx-font-size: 16px;  /* Taille de police augmentée */
+    -fx-font-weight: 600;  /* Poids de la police un peu plus fort */
+    -fx-padding: 5px 0;  /* Padding autour du texte */
+}
+
+/* TextArea (zone de texte) avec bordures et ombre légère */
+#textAreaContenu {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #BDC3C7;  /* Bordure grise douce */
+    -fx-border-radius: 8px;  /* Coins arrondis pour plus de douceur */
+    -fx-padding: 10px;
+    -fx-font-size: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 3, 3);  /* Ombre subtile */
+}
+
+/* Conteneur de l'image avec une bordure fine et ombre */
+#imageView {
+    -fx-border-color: #BDC3C7;  /* Bordure grise douce */
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;  /* Coins arrondis */
+    -fx-background-color: #fff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 3, 3);  /* Ombre légère */
+}
+
+/* Boutons avec un dégradé bleu moderne */
+Button {
+    -fx-background-color: linear-gradient(to right, #2980B9, #6DD5FA); /* Dégradé bleu pour un look moderne */
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 18px;
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: background-color 0.3s ease, transform 0.3s ease;  /* Transition douce */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 3, 3);  /* Ombre légère pour le bouton */
+}
+
+/* Effet hover (au survol) : changement de couleur et effet d'agrandissement */
+Button:hover {
+    -fx-background-color: linear-gradient(to right, #1F618D, #5DADE2); /* Dégradé bleu plus foncé au survol */
+    -fx-transform: scale(1.05);  /* Légère augmentation de taille au survol */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 6, 0, 4, 4);  /* Ombre plus marquée au survol */
+}
+
+/* Bouton Annuler (rouge) avec une meilleure couleur et effet hover */
+Button[text="Annuler"] {
+    -fx-background-color: linear-gradient(to right, #E74C3C, #C0392B);  /* Dégradé rouge */
+}
+
+Button[text="Annuler"]:hover {
+    -fx-background-color: linear-gradient(to right, #C0392B, #A93226); /* Changement de couleur au survol */
+    -fx-transform: scale(1.05);  /* Agrandissement au survol pour un effet interactif */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 6, 0, 4, 4);  /* Ombre marquée au survol */
+}

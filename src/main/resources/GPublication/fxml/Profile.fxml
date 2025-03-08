@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+
+<ScrollPane fitToWidth="true" styleClass="profile-scroll-pane" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            stylesheets="@../style/profile.css">
+
+    <VBox spacing="0" styleClass="profile-container">
+        <!-- Section photo de couverture -->
+        <StackPane styleClass="cover-photo-container">
+            <ImageView fx:id="coverPhoto" fitWidth="1000" fitHeight="300"
+                       styleClass="cover-photo" preserveRatio="false">
+                <image>
+                    <Image url="@../images/p.png"/>
+                </image>
+            </ImageView>
+
+            <!-- Container pour la photo de profil qui chevauche la photo de couverture -->
+            <StackPane styleClass="profile-picture-container"
+                       StackPane.alignment="BOTTOM_LEFT">
+                <Circle fx:id="profileCircle" radius="60"
+                        styleClass="profile-picture-circle"/>
+                <ImageView fx:id="profileImage" fitWidth="120" fitHeight="120"
+                           styleClass="profile-picture">
+                    <image>
+                        <Image url="@../images/shadow.png"/>
+                    </image>
+                </ImageView>
+            </StackPane>
+        </StackPane>
+
+        <!-- Section informations du profil -->
+        <VBox styleClass="profile-info-container">
+            <Label fx:id="userName" styleClass="profile-name"
+                   text="Nom d'utilisateur"/>
+            <Label fx:id="userBio" styleClass="profile-bio"
+                   text="Biographie de l'utilisateur" wrapText="true"/>
+
+            <HBox spacing="20" styleClass="profile-stats">
+                <Label text="Publications: 0" styleClass="stat-label"/>
+                <Label text="Abonnés: 0" styleClass="stat-label"/>
+                <Label text="Abonnements: 0" styleClass="stat-label"/>
+            </HBox>
+
+            <Button text="Modifier le profil" styleClass="edit-profile-button"/>
+        </VBox>
+
+        <!-- Section des publications -->
+        <VBox fx:id="userPostsContainer" styleClass="user-posts-container">
+            <!-- Les posts seront ajoutés dynamiquement ici -->
+        </VBox>
+    </VBox>
+
+</ScrollPane>

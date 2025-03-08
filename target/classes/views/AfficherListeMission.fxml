@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.net.URL?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.AfficherListeMissionController"
+            stylesheets="@../styles/styles.css, @../styles/sidebar.css"
+            prefHeight="720" prefWidth="1080">
+
+    <!-- ✅ Sidebar on the Left -->
+    <left>
+        <VBox fx:id="sidebarContainer" styleClass="sidebar">
+            <fx:include source="../components/sidebar.fxml"/>
+        </VBox>
+    </left>
+
+    <!-- ✅ Main Content in the Center -->
+    <center>
+        <VBox spacing="10" styleClass="form-container">
+            <!-- Title -->
+            <Label text="Liste des Missions" styleClass="label-title"/>
+
+            <!-- Search Bar and Sorting -->
+            <HBox spacing="10" styleClass="hbox-search-bar">
+                <!-- StackPane for Search Icon and TextField -->
+                <StackPane>
+                    <TextField fx:id="rechercheTextField" promptText="Rechercher par titre" styleClass="search-text-field"/>
+                    <ImageView fitWidth="20" fitHeight="20" styleClass="search-icon">
+                        <image>
+                            <Image url="@../images/search-icon.png"/>
+                        </image>
+                    </ImageView>
+                </StackPane>
+
+                <Button text="Rechercher" onAction="#rechercherParTitre" styleClass="button button-search"/>
+                <Button text="Trier par titre" onAction="#trierParTitre" styleClass="button button-sort"/>
+            </HBox>
+
+            <!-- ListView to display Missions -->
+            <ListView fx:id="missionListView" styleClass="list-view"/>
+
+            <!-- Buttons for Actions -->
+            <HBox spacing="10" styleClass="hbox">
+                <Button onAction="#naviguerAjouterMission" styleClass="button button-add">
+                    <graphic>
+                        <ImageView fitWidth="24" fitHeight="24">
+                            <image>
+                                <Image url="@../images/add-icon.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button onAction="#naviguerModifierMission" styleClass="button button-edit">
+                    <graphic>
+                        <ImageView fitWidth="24" fitHeight="24">
+                            <image>
+                                <Image url="@../images/edit-icon.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button onAction="#supprimerMission" styleClass="button button-delete">
+                    <graphic>
+                        <ImageView fitWidth="24" fitHeight="24">
+                            <image>
+                                <Image url="@../images/delete-icon.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

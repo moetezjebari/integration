@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterCandidatureController" spacing="10" style="-fx-padding: 20;">
+    <Label text="Ajouter une Candidature" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+
+    <!-- Formulaire pour ajouter une candidature -->
+    <GridPane hgap="10" vgap="10">
+        <Label text="Utilisateur:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="utilisateurComboBox" promptText="Sélectionner un utilisateur" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Mission:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="missionComboBox" promptText="Sélectionner une mission" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="CV (PNG/JPG):" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <HBox GridPane.rowIndex="2" GridPane.columnIndex="1" spacing="10">
+            <Button text="Sélectionner une image" onAction="#choisirImage" />
+            <Label fx:id="nomImageLabel" text="Aucune image sélectionnée" />
+        </HBox>
+
+        <Label text="Réponses aux questions:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextArea fx:id="reponseQuestionsArea" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <!-- Boutons pour valider, générer PDF, envoyer un e-mail ou annuler -->
+    <HBox spacing="10">
+        <!-- Bouton Valider -->
+        <Button onAction="#ajouterCandidature" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fitWidth="40" fitHeight="40">
+                    <image>
+                        <Image url="@../images/validater.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+        <!-- Bouton Générer PDF -->
+        <Button onAction="#genererLettreMotivationPDF" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fitWidth="40" fitHeight="40">
+                    <image>
+                        <Image url="@../images/generer_pdf.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+        <!-- Bouton Envoyer E-mail -->
+        <Button onAction="#envoyerEmailTest" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fitWidth="40" fitHeight="40">
+                    <image>
+                        <Image url="@../images/envoyer_email.jpg" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+
+        <!-- Bouton Annuler -->
+        <Button onAction="#annulerAjout" style="-fx-background-color: transparent;">
+            <graphic>
+                <ImageView fitWidth="40" fitHeight="40">
+                    <image>
+                        <Image url="@../images/annuler.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+    </HBox>
+</VBox>

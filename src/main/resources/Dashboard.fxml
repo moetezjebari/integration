@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<BorderPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.DashboardController"
+            stylesheets="@/styles/sidebar.css , @/styles/styles.css"
+            prefHeight="720" prefWidth="1080">
+
+    <!-- ✅ Left Sidebar -->
+    <left>
+        <VBox fx:id="sidebarContainer" styleClass="sidebar">
+            <fx:include source="/components/sidebar.fxml"/>
+        </VBox>
+    </left>
+
+    <!-- ✅ Main Content -->
+    <center>
+        <AnchorPane fx:id="mainContent" prefHeight="720" prefWidth="850">
+
+            <!-- ✅ Background Image -->
+            <ImageView fitHeight="720" fitWidth="850" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../.././logo.jpg" />
+                </image>
+            </ImageView>
+
+            <!-- ✅ Top Controls -->
+            <HBox layoutX="20.0" layoutY="14.0" spacing="10">
+                <Button mnemonicParsing="false" onAction="#ouvrirAjouterUtilisateur"
+                        styleClass="add-button" text="Ajouter Utilisateur"/>
+
+                <TextField fx:id="searchField" onKeyReleased="#rechercherParNom"
+                           prefWidth="200.0" promptText="Rechercher par nom..."/>
+
+                <ComboBox fx:id="comboTriDate" onAction="#trierParDate" prefHeight="31.0" prefWidth="217.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Sélectionner le tri"/>
+                            <String fx:value="Plus ancien → Plus récent"/>
+                            <String fx:value="Plus récent → Plus ancien"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+                <Button mnemonicParsing="false" onAction="#afficherStatistiques"
+                        styleClass="stats-button" text="Afficher Statistiques"/>
+
+                <Button mnemonicParsing="false" onAction="#handleLogout"
+                        styleClass="logout-button" text="Déconnexion"/>
+            </HBox>
+
+            <!-- ✅ Users Table -->
+            <VBox layoutX="20.0" layoutY="60.0" maxHeight="Infinity" maxWidth="Infinity">
+                <HBox prefHeight="40.0" prefWidth="800.0" styleClass="table-header">
+                    <Label prefWidth="100.0" text="Nom"/>
+                    <Label prefWidth="100.0" text="Prénom"/>
+                    <Label prefWidth="150.0" text="Email"/>
+                    <Label prefWidth="150.0" text="Type Utilisateur"/>
+                    <Label prefWidth="150.0" text="Date Inscription"/>
+                    <Label prefWidth="150.0" text="Téléphone"/>
+                    <Label prefWidth="150.0" text="Actions"/>
+                </HBox>
+
+                <ScrollPane fx:id="scroll" opacity="0.9" prefHeight="566.0" prefWidth="800.0">
+                    <content>
+                        <GridPane fx:id="grid" prefHeight="10.0" prefWidth="800.0"/>
+                    </content>
+                </ScrollPane>
+            </VBox>
+
+        </AnchorPane>
+    </center>
+
+</BorderPane>

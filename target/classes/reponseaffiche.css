@@ -1,0 +1,41 @@
+/* Appliquer un fond bleu clair avec une image d'arrière-plan */
+#root {
+    -fx-background-image: url("/images/background.png"); /* Image de fond */
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-color: #f4f4f4; /* Fond clair au cas où l'image ne se charge pas */
+    -fx-padding: 15px;
+}
+
+/* Style du titre avec couleur bleue */
+Label {
+    -fx-text-fill: #2980B9; /* Bleu foncé */
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 0;
+}
+
+/* Conteneur des réponses avec bordure et léger arrondi */
+#reponsesContainer {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #2980B9; /* Bordure bleue */
+    -fx-border-radius: 8px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 2, 2);
+}
+
+/* Bouton Ajouter une réponse avec dégradé bleu */
+#btnAjouterReponse {
+    -fx-background-color: linear-gradient(to right, #2980B9, #6DD5FA); /* Dégradé bleu */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 14px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+/* Effet au survol du bouton */
+#btnAjouterReponse:hover {
+    -fx-background-color: linear-gradient(to right, #1F618D, #5DADE2); /* Bleu plus foncé au survol */
+}

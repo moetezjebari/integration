@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.AfficherListeCandidatureController"
+            stylesheets="@../styles/styles.css , @../styles/sidebar.css"
+            prefHeight="720" prefWidth="1080">
+
+    <!-- ✅ Left Sidebar -->
+    <left>
+        <VBox fx:id="sidebarContainer" styleClass="sidebar">
+            <fx:include source="../components/sidebar.fxml"/>
+        </VBox>
+    </left>
+
+    <!-- ✅ Main Content -->
+    <center>
+        <VBox spacing="20" styleClass="form-container">
+            <Label text="Liste des Candidatures" styleClass="label-title"/>
+
+            <!-- ListView pour afficher les candidatures -->
+            <ListView fx:id="candidatureListView" styleClass="list-view"/>
+
+            <!-- Bouton pour générer le QR Code -->
+            <Button text="Générer QR Code" onAction="#handleGenerateQRCodeButtonClick" styleClass="button button-generate-qr"/>
+
+            <!-- ImageView pour afficher le QR Code -->
+            <ImageView fx:id="qrCodeImageView" fitWidth="200" fitHeight="200" styleClass="qr-code-image"/>
+
+            <!-- Boutons pour les actions (remplacés par des icônes) -->
+            <HBox spacing="10" styleClass="hbox">
+                <!-- Bouton Ajouter Candidature -->
+                <Button onAction="#naviguerAjouterCandidature" styleClass="button button-edit">
+                    <graphic>
+                        <ImageView fitWidth="24" fitHeight="24">
+                            <image>
+                                <Image url="@../images/add-icon.png" /> <!-- Icône Ajouter -->
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <!-- Bouton Modifier Candidature -->
+                <Button onAction="#naviguerModifierCandidature" styleClass="button button-warning">
+                    <graphic>
+                        <ImageView fitWidth="24" fitHeight="24">
+                            <image>
+                                <Image url="@../images/edit-icon.png" /> <!-- Icône Modifier -->
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <!-- Bouton Supprimer Candidature -->
+                <Button onAction="#supprimerCandidature" styleClass="button button-delete">
+                    <graphic>
+                        <ImageView fitWidth="24" fitHeight="24">
+                            <image>
+                                <Image url="@../images/delete-icon.png" /> <!-- Icône Supprimer -->
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

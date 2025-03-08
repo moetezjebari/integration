@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.ModificationReponseController" stylesheets="@modification_style.css">
+
+    <children>
+        <VBox spacing="10" layoutX="10" layoutY="10">
+            <Label text="Modifier la Réponse" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+            <Label text="Contenu de la réponse :" />
+            <TextArea fx:id="textAreaContenu" prefHeight="100" wrapText="true"/>
+
+            <Label text="Image actuelle :" />
+            <HBox spacing="10">
+                <ImageView fx:id="imageView" fitWidth="150" fitHeight="150" preserveRatio="true"/>
+                <Button fx:id="btnChangerImage" text="Changer l'image" onAction="#choisirNouvelleImage"/>
+            </HBox>
+
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button fx:id="btnModifier" text="Modifier" onAction="#modifierReponse"/>
+                <Button fx:id="btnFermer" text="Annuler" onAction="#fermer"/>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

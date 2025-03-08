@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<?import java.net.URL?>
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterMissionController" spacing="10" style="-fx-padding: 20;">
+    <stylesheets>
+        <URL value="@../styles/styles.css" />
+    </stylesheets>
+    <Label text="Ajouter une Mission" styleClass="label-title"/>
+
+    <GridPane hgap="10" vgap="10">
+        <!-- Titre -->
+        <Label text="Titre:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="titreField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <!-- Description -->
+        <Label text="Description:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="descriptionField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <!-- Compétences -->
+        <Label text="Compétences:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="competanceField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <!-- Durée -->
+        <Label text="Durée (jours):" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="dureeField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <!-- Budget -->
+        <Label text="Budget (€):" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="budgetField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <!-- Date de publication -->
+        <Label text="Date de publication:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="datePubPicker" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <!-- Questions -->
+        <Label text="Questions:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <TextField fx:id="questionsField" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+        <!-- Nom de l'entreprise -->
+        <Label text="Nom de l'entreprise:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <TextField fx:id="nomEntrepriseField" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+    </GridPane>
+
+
+
+    <!-- Bouton Ajouter -->
+    <Button text="Ajouter" onAction="#ajouterMission" styleClass="button button-add"/>
+</VBox>

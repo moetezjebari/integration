@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<?import javafx.scene.layout.StackPane?>
+<VBox alignment="CENTER_LEFT" spacing="10" stylesheets="@../style/App.css"
+      maxWidth="600"
+      styleClass="post-interface-container"
+      xmlns="http://javafx.com/javafx/20.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.Controller.PostInterfaceController">
+
+    <!-- Section Profil et Champ de Texte -->
+    <HBox spacing="10" styleClass="input-container">
+        <StackPane>
+            <!-- Cercle -->
+            <Circle radius="49.0" stroke="BLACK" strokeType="INSIDE"/>
+            <!-- Image à l'intérieur du cercle -->
+            <ImageView fx:id="profileImage" styleClass="profile-picture" fitWidth="98" fitHeight="98">
+                <image>
+                    <Image url="@../images/shadow.png"/>
+                </image>
+            </ImageView>
+        </StackPane>
+        <TextField fx:id="text" onAction="#handleButtonClick" promptText="Commencer un post" />
+    </HBox>
+
+    <!-- Boutons d'actions -->
+    <HBox spacing="40">
+        <style>
+            -fx-alignment: center;
+        </style>
+        <Button text=" Médias" fx:id="mediaButton" onAction="#handleButtonClick" >
+            <graphic>
+                <ImageView fitHeight="16" fitWidth="16">
+                        <Image url="@../images/media-icon.png" />
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button text=" Événement">
+            <graphic>
+                <ImageView fitHeight="16" fitWidth="16">
+
+                        <Image url="@../images/calendrier-icon.png" />
+
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button text=" Rédiger un article">
+            <graphic>
+                <ImageView fitHeight="16" fitWidth="16">
+
+                        <Image url="@../images/article-icon.png" />
+
+                </ImageView>
+            </graphic>
+        </Button>
+    </HBox>
+
+</VBox>

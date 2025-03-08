@@ -1,0 +1,32 @@
+.root-pane {
+    -fx-background-image: url('/images/background.png');
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+.button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+}
+
+.combo-box {
+    -fx-font-size: 14px;
+    -fx-pref-width: 200px;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.grid-pane {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+}
+
+.label {
+    -fx-font-size: 14px;
+}

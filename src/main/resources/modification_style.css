@@ -1,0 +1,89 @@
+/* Fond général de l'AnchorPane avec un dégradé subtil de bleu et gris clair */
+AnchorPane {
+    -fx-background-color: linear-gradient(to bottom, #e0f7fa, #f1f8ff);  /* Dégradé bleu clair vers gris très pâle */
+    -fx-padding: 20px;
+}
+
+/* Style des labels */
+Label {
+    -fx-text-fill: #2c3e50; /* Gris foncé pour contraste */
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;  /* Poids de la police plus prononcé */
+}
+
+/* Titre principal (Modifier la Réponse) */
+Label[text="Modifier la Réponse"] {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3498db;  /* Bleu vif pour attirer l'attention */
+}
+
+/* Zone de texte (TextArea) avec bordure et ombre légère */
+#textAreaContenu {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #3498db;  /* Bleu moderne pour la bordure */
+    -fx-border-radius: 8px;
+    -fx-padding: 10px;
+    -fx-font-size: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 3, 3);  /* Ombre subtile */
+}
+
+/* Conteneur de l'image avec bordure et effet d'ombre légère */
+#imageView {
+    -fx-border-color: #BDC3C7;  /* Bordure gris clair */
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 3, 3);  /* Ombre légère */
+}
+
+/* Boutons avec un dégradé de bleu vif */
+Button {
+    -fx-background-color: linear-gradient(to right, #3498db, #2980b9);  /* Dégradé bleu vif à bleu foncé */
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 16px;
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: background-color 0.3s ease, transform 0.3s ease;  /* Transition douce */
+}
+
+/* Effet hover (au survol) avec changement de couleur et agrandissement */
+Button:hover {
+    -fx-background-color: linear-gradient(to right, #2980b9, #1f6390);  /* Changement de bleu au survol */
+    -fx-transform: scale(1.05);  /* Agrandissement au survol */
+}
+
+/* Bouton Annuler (rouge vif) */
+#btnFermer {
+    -fx-background-color: linear-gradient(to right, #e74c3c, #c0392b);  /* Dégradé rouge vif */
+    -fx-text-fill: white;
+}
+
+#btnFermer:hover {
+    -fx-background-color: linear-gradient(to right, #c0392b, #a93226); /* Changement de couleur au survol */
+    -fx-transform: scale(1.05);  /* Agrandissement au survol */
+}
+
+/* Bouton Modifier (dégradé bleu clair) */
+#btnModifier {
+    -fx-background-color: linear-gradient(to right, #3498db, #2980b9);  /* Dégradé bleu */
+    -fx-text-fill: white;
+}
+
+#btnModifier:hover {
+    -fx-background-color: linear-gradient(to right, #2980b9, #1f6390);  /* Changement de couleur au survol */
+    -fx-transform: scale(1.05);  /* Agrandissement au survol */
+}
+
+/* Bouton pour changer l'image (bleu clair) */
+#btnChangerImage {
+    -fx-background-color: linear-gradient(to right, #00bcd4, #0097a7);  /* Dégradé bleu clair vers bleu turquoise */
+    -fx-text-fill: white;
+}
+
+#btnChangerImage:hover {
+    -fx-background-color: linear-gradient(to right, #0097a7, #007c8e); /* Changement de couleur au survol */
+    -fx-transform: scale(1.05);  /* Agrandissement au survol */
+}

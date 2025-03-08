@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<?import java.net.URL?>
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MissionDetailsController" spacing="10" style="-fx-padding: 20;">
+    <!-- Appliquer le fichier CSS externe -->
+    <stylesheets>
+        <URL value="@../styles/styles.css" />
+    </stylesheets>
+
+    <!-- Titre de la page -->
+    <Label text="Détails de la Mission" styleClass="label-title"/>
+
+    <!-- Grille pour afficher les détails de la mission -->
+    <GridPane hgap="10" vgap="10" styleClass="grid-pane">
+        <!-- Titre -->
+        <Label text="Titre:" styleClass="detail-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="titreLabel" styleClass="detail-value" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <!-- Description -->
+        <Label text="Description:" styleClass="detail-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="descriptionLabel" styleClass="detail-value" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <!-- Compétences -->
+        <Label text="Compétences:" styleClass="detail-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="competanceLabel" styleClass="detail-value" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <!-- Durée -->
+        <Label text="Durée:" styleClass="detail-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <Label fx:id="dureeLabel" styleClass="detail-value" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <!-- Budget -->
+        <Label text="Budget:" styleClass="detail-label" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <Label fx:id="budgetLabel" styleClass="detail-value" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <!-- Date de publication -->
+        <Label text="Date de publication:" styleClass="detail-label" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <Label fx:id="datePubLabel" styleClass="detail-value" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <!-- Questions -->
+        <Label text="Questions:" styleClass="detail-label" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <Label fx:id="questionsLabel" styleClass="detail-value" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+        <!-- Nom de l'entreprise -->
+        <Label text="Nom de l'entreprise:" styleClass="detail-label" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <Label fx:id="nomEntrepriseLabel" styleClass="detail-value" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <!-- Boutons -->
+    <HBox spacing="10">
+        <Button text="Retour" onAction="#retour" styleClass="button button-back"/>
+        <Button text="Générer PDF" onAction="#genererPDF" styleClass="button button-pdf"/>
+    </HBox>
+</VBox>

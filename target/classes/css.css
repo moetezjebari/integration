@@ -1,0 +1,62 @@
+/* Fond général du chat avec un dégradé doux */
+AnchorPane {
+    -fx-background-color: linear-gradient(to bottom, #E8F6FF, #F0F4F7); /* Dégradé bleu très clair */
+    -fx-padding: 20px;
+}
+
+/* Zone de texte pour l'affichage des messages */
+#chatArea {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #A9C6E3; /* Bordure bleu clair */
+    -fx-border-radius: 10px;
+    -fx-padding: 15px;
+    -fx-font-size: 16px;
+    -fx-pref-height: 500px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 10, 10); /* Ombre subtile */
+}
+
+/* Zone de texte pour l'input du message */
+#inputField {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #3498DB; /* Bleu vif */
+    -fx-border-radius: 10px;
+    -fx-font-size: 16px;
+    -fx-padding: 12px;
+    -fx-prompt-text-fill: #BDC3C7; /* Couleur douce pour le texte de prompt */
+    -fx-focus-color: #3498DB; /* Bleu vif pour le focus */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 3, 3); /* Ombre douce */
+}
+
+/* Effet de focus pour la zone de texte (input) */
+#inputField:focused {
+    -fx-border-color: #2980B9; /* Bleu plus sombre pour l'input au focus */
+}
+
+/* Bouton Envoyer avec un dégradé bleu moderne */
+#sendButton {
+    -fx-background-color: linear-gradient(to right, #2980B9, #3498DB); /* Dégradé bleu vibrant */
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 24px;
+    -fx-border-radius: 10px;
+    -fx-cursor: hand;
+    -fx-transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Effet hover pour le bouton Envoyer */
+#sendButton:hover {
+    -fx-background-color: linear-gradient(to right, #1F618D, #5DADE2); /* Dégradé bleu plus foncé */
+    -fx-transform: scale(1.05);  /* Légère animation d'agrandissement */
+}
+
+/* Zone de texte input quand au focus */
+#inputField:focused {
+    -fx-background-color: #EAF2F8; /* Fond clair au focus pour plus de contraste */
+    -fx-border-color: #2980B9; /* Bordure bleue claire */
+}
+
+/* Styles pour les éléments en général */
+TextArea, TextField {
+    -fx-font-family: 'Segoe UI', sans-serif; /* Police moderne */
+}
